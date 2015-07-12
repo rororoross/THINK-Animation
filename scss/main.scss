@@ -1,5 +1,35 @@
 @import 'partials/reset';
 
 body {
+	background: black;
+}
 
+.container {
+	width: 50vw;
+	height: 50vh;
+	box-sizing: border-box;
+	margin: 0 auto;
+	margin-top: 10%;
+}
+
+.shape {
+  stroke-dasharray: 280;
+  stroke-dashoffset: 280;
+  animation: dash 8s forwards;
+  animation-timing-function: cubic-bezier(0.195, 0.010, 0.940, 1.030);
+	
+}
+
+.shape:nth-child(even) {
+	animation-delay: 1s;
+}
+
+.shape:nth-child(4n+0) {
+	animation-delay: 2.2s;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
